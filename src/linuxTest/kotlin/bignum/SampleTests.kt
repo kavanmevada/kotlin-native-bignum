@@ -5,7 +5,6 @@ import bignum.compute.multiply
 import bignum.compute.substraction
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertTrue
 
 class SampleTests {
     val num1 = "78046865754778456475475980547457679431345456585625135878908573463453465686956"
@@ -30,5 +29,13 @@ class SampleTests {
         val result = multiply(num1, num2)
         val realAns = "544427979948780395014337575473029265517077355742800524440302228778935731766132782249279951852943609042631843014153751431657177807472118352772633375657094811210436320052"
         assertEquals(result, realAns)
+    }
+
+    @Test
+    fun testgcdLarge() {
+        val a = 1221L
+        val b = "19837658191095787329"
+        val result = gcdLarge(a, b)
+        assertEquals(result, 3L)
     }
 }

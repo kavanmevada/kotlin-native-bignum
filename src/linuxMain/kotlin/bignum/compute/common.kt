@@ -57,3 +57,20 @@ fun whichIsBig(str1: String, str2: String): Pair<String, String> {
     }
     return (str1 to str2) //Both are equals
 }
+
+
+fun String.isGreater(x: String): Boolean {
+    val l1 = length
+    val l2 = x.length
+
+    when {
+        l1 < l2 -> return false //str2 is big
+        l1 > l2 -> return true //str1 is big
+        else -> for (i in 0 until l1) {
+            if (get(i) - 0 > x[i] - 0) return true //str1 is big
+            else if (get(i) - 0 < x[i] - 0) return false //str2 is big
+            else continue
+        }
+    }
+    return false //Both are equals
+}

@@ -49,7 +49,7 @@ fun multiply3(str1: String, str2: String): String {
 
 
 fun multiply(str1: String, str2: String): String {
-    println("----------- str1:$str1 str2:$str2 -----------")
+    //println("----------- str1:$str1 str2:$str2 -----------")
 
     // Find Big Num length
     val l1 = str1.length
@@ -89,34 +89,34 @@ fun multiply(str1: String, str2: String): String {
 
 
         val ac = multiply(a, c)
-        println("a:$a c:$c = ac:$ac")
+        //println("a:$a c:$c = ac:$ac")
 
         val bd = multiply(b, d)
-        println("b:$b d:$d = bd:$bd")
+        //println("b:$b d:$d = bd:$bd")
 
         val plus1 = addition(a, b) // a+b
-        println("plus1:$plus1")
+        //println("plus1:$plus1")
 
         val plus2 = addition(c, d) // c+d
-        println("plus2:$plus2")
+        //println("plus2:$plus2")
 
         val P3 = multiply(plus1, plus2)
-        println("P3:$P3")
+        //println("P3:$P3")
 
         val P4 = substraction(substraction(P3, ac), bd)
-        println("P4:$P4")
+        //println("P4:$P4")
 
 
         val first = ac + "0".repeat(2*k)
         val mid = P4 + "0".repeat(k)
         val last = bd
 
-        println("first:$first mid:$mid last:$last")
+        //println("first:$first mid:$mid last:$last")
 
 
         val ans = addition(addition(first, mid), last)
 
-        println("ans:$ans")
+        //println("ans:$ans")
 
         return ans.cleaned()
 
