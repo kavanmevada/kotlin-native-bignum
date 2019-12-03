@@ -1,6 +1,7 @@
 package bignum
 
 import bignum.compute.addition
+import bignum.compute.divide
 import bignum.compute.multiply
 import bignum.compute.substraction
 import kotlin.test.Test
@@ -32,10 +33,9 @@ class SampleTests {
     }
 
     @Test
-    fun testgcdLarge() {
-        val a = 1221L
-        val b = "19837658191095787329"
-        val result = gcdLarge(a, b)
-        assertEquals(result, 3L)
+    fun testDivision() {
+        val result = divide(num2, num1)
+        val realAns = "089377767524656"
+        assertEquals(result, realAns)
     }
 }

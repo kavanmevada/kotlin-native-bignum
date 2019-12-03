@@ -1,9 +1,6 @@
 package bignum
 
-import bignum.compute.addition
-import bignum.compute.isGreater
-import bignum.compute.multiply
-import bignum.compute.substraction
+import bignum.compute.*
 import kotlin.system.measureNanoTime
 
 
@@ -12,54 +9,12 @@ fun hello(): String = "Hello, Kotlin/Native!"
 fun main() {
     println(hello())
 
-    //println(powerStrings("2", "3", (1e9 + 7).toLong()))
-
-    divide("6797673498237646797673498237645021374589888342350213745898883423", "6797673498237645021374589888")
-    //1000000000000000261309830313292584851
-
 
     val kavan: Int = 0
 }
 
 
 
-
-
-fun divide(x: String, y: String) {
-
-    //TODO y must less then or equal x
-
-    val pieceSize = y.length
-
-    var num = x.substring(0, pieceSize)
-
-    var quo = ""
-    var remainder = ""
-
-    for (i in pieceSize-1 until x.length) {
-        for (j in 0..10) {
-            val currA = multiply(y, "$j")
-            val currB = multiply(y, "${j + 1}")
-
-            if (currB.isGreater(num)) {
-                quo += j
-
-                val sub = substraction(num, currA)
-
-                if (i + 1 < x.length) {
-                    num = addition(sub + "0", "${x[i + 1]}")
-                } else {
-                    remainder = sub
-                }
-
-                break
-            }
-        }
-    }
-
-    println("quo:$quo rem:$remainder")
-
-}
 
 
 

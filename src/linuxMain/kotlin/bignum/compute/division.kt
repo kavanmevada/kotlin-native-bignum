@@ -1,6 +1,6 @@
 package bignum.compute
 
-fun divide(x: String, y: String) {
+fun divide(x: String, y: String) : String {
 
     //TODO y must less then or equal x
 
@@ -32,6 +32,6 @@ fun divide(x: String, y: String) {
         }
     }
 
-    println("quo:$quo rem:$remainder")
-
+    //println("quo:$quo rem:$remainder")
+    return quo
 }
