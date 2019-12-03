@@ -50,4 +50,16 @@ Result: "54442797994878039501433757547302926551707735574280052444030222877893573
  ```
 </div>
 
+**Division**
+Result will be returned as `String`
+<div class="sample" markdown="1" theme="idea" data-highlight-only>
+
+```kotlin
+
+val result = division(num2, num1) // First digit must be larger then second
+println(result)
+Result: "089377767524656"
+ ```
+</div>
+
 Note: Library is still under development.
