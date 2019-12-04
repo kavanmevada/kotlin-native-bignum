@@ -1,10 +1,14 @@
 package bignum.compute
 
-fun divide(x: String, y: String) : String {
-
-    //TODO y must less then or equal x
+fun division(x: String, y: String) : Pair<String, String> {
 
     val pieceSize = y.length
+
+
+    if (y.isGreater(x)) return "0" to x
+    else if (x == "0") return "0" to "0"
+    //TODO implement throw error on "num/0"
+
 
     var num = x.substring(0, pieceSize)
 
@@ -24,7 +28,7 @@ fun divide(x: String, y: String) : String {
                 if (i + 1 < x.length) {
                     num = addition(sub + "0", "${x[i + 1]}")
                 } else {
-                    remainder = sub
+                    remainder = sub.cleaned()
                 }
 
                 break
@@ -33,5 +37,9 @@ fun divide(x: String, y: String) : String {
     }
 
     //println("quo:$quo rem:$remainder")
-    return quo
+    return quo.cleaned() to remainder
 }
+
+
+fun divide(x: String, y: String) = division(x, y).first
+fun mod(x: String, y: String) = division(x, y).second

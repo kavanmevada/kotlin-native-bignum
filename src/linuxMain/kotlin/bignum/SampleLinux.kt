@@ -10,59 +10,14 @@ fun main() {
     println(hello())
 
 
-    val kavan: Int = 0
+    val a = "65537"
+    val m = "15166926664709716667942205393010561001948046930655516915962954857313795620516487420165145314674847016632910428541850885455208751754091856593720859678428300038169958374637870151540444491136118563716152917433640638540167202512723077277539513297837528211292408368640636807050066740641222119554707253152691400848501568174444017704890252120050024738716345450700365127964732618227829078048653931617963872233989434361163363978907267968992471699236848546273367345823624845717451894562839252947441335769348384749192736588371871150109884850152924857412343286027119085978105908844643816626934477827791704805246658776920099879968"
+    println(modInverse(a, m))
+
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-fun powerStrings(sa: String, sb: String, mod: Long): Long { // We convert strings to number
-    var a: Long = 0
-    var b: Long = 0
-    // calculating a % MOD
-    for (i in 0 until sa.length) {
-        a = (a * 10 + (sa[i] - '0')) % mod
-    }
-    // calculating b % (MOD - 1)
-    for (i in 0 until sb.length) {
-        b = (b * 10 + (sb[i] - '0')) % (mod - 1)
-    }
-    // Now a and b are long long int. We
-    // calculate a^b using modulo exponentiation
-    return powerLL(a, b, mod)
-}
-
-fun powerLL(x: Long, n: Long, mod: Long): Long {
-    var x = x
-    var n = n
-    var result: Long = 1
-    while (n > 0) {
-        if (n % 2 == 1L) {
-            result = result * x % mod
-        }
-        n = n / 2
-        x = x * x % mod
-    }
-    return result
-}
-
-
-
-
-//100011111100
 
 
 
