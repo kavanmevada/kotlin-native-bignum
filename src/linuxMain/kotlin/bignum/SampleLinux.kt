@@ -29,6 +29,7 @@ inline fun <R> measures(block1: () -> R, block2: () -> R) {
             block1()
         }
     }
+
     val t2 = measureNanoTime {
         for (i in 0 until 10000) {
             block2()
