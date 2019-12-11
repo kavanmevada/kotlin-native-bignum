@@ -14,7 +14,7 @@ fun modInverse(_a: String, _m: String): String {
     //println("$a $m $m0 $y $x")
     if (m == "1") return "0"
     while (a.isGreater("1")) { // q is quotient
-        val tmp = division(a, m)
+        val tmp = division_school(a, m)
         val q = tmp.first
 
         var t = m

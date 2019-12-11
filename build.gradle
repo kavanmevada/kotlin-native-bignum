@@ -3,6 +3,9 @@ plugins {
 }
 repositories {
     mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
 }
 kotlin {
     // For ARM, should be changed to iosArm32 or iosArm64

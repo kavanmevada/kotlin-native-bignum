@@ -1,6 +1,7 @@
 package bignum.compute
 
-fun division(x: String, y: String) : Pair<String, String> {
+//TODO implement any fast algorithm like barrett or newton's
+fun division_school(x: String, y: String) : Pair<String, String> {
 
     val pieceSize = y.length
 
@@ -41,5 +42,22 @@ fun division(x: String, y: String) : Pair<String, String> {
 }
 
 
-fun divide(x: String, y: String) = division(x, y).first
-fun mod(x: String, y: String) = division(x, y).second
+fun divide(x: String, y: String) = division_school(x, y).first
+fun mod(x: String, y: String) = division_school(x, y).second
+
+
+
+fun divideByTwo(num: String): String {
+    var additive = 0
+    var answer = ""
+
+    num.forEach {
+        val div = (it -'0') / 2 + additive
+        answer += div
+        if (it == '1' || it == '3' || it == '5' || it == '7' || it == '9'){
+            additive = 5
+        } else additive = 0
+    }
+
+    return answer.cleaned()
+}
