@@ -2,8 +2,6 @@
 
 ![build](https://github.com/kavanmevada/kotlin-native-bignum/workflows/Build/badge.svg)
 
-An Path object that may be used to locate a file in a file system. It will typically represent a system dependent file path.
-
 **Defining Input Numbers**
 Define input numbers as `String`
 <div class="sample" markdown="1" theme="idea" data-highlight-only>
